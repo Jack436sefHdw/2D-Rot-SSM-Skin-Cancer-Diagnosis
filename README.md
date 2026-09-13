@@ -26,4 +26,4 @@
 * **核心領域：** State Space Models (SSM), IIR Filter Design, Parallel Scanning
 
 ## 📄 計畫相關文件 (Documents)
-* **[閱讀完整國科會計畫企劃書 (PDF)](#)** <!-- 上傳 PDF 後，將此處的 # 替換為你的 PDF 檔案連結 -->
+* **[NSTC_2D-Rot-Skin.pdf](#)** <!-- 上傳 PDF 後，將此處的 # 替換為你的 PDF 檔案連結 -->
