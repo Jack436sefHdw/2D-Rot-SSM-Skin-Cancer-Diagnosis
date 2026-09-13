@@ -1,2 +1,29 @@
-# 2D-Rot-SSM-Skin-Cancer-Diagnosis
-NSTC Undergraduate Research Project: 2D Rot-SSM for Medical Image Diagnosis
+# 🚀 基於 2D Rot-SSM 之皮膚癌自動化診斷系統
+> 國科會 (NSTC) 大專學生研究計畫 | 針對高解析度醫療影像開發之線性複雜度視覺骨幹
+
+⚠️ **保密聲明 (Confidentiality Notice):** 
+本專案為國科會執行中計畫，核心源碼受實驗室規範保護，故暫不開源。本頁面僅展示系統架構、演算法創新與研發進度。
+
+## 📖 專案簡介 (About The Project)
+在處理高解析度醫療影像（如 ISIC 2019 皮膚癌數據集）時，傳統 Vision Transformer 面臨 $O(N^2)$ 的運算災難，而最新的 Mamba/SSM 模型在邊緣設備進行低位元推論時，容易產生量化誤差導致極點發散。
+
+本專案開發具備 $O(N)$ 線性複雜度的 **「二維旋轉狀態空間模型 (2D Rot-SSM)」**。透過從底層數學架構引入 **Rot-IIR 重參數化技術**，解決了邊緣運算的數值不穩定問題，並獨創頻域可解釋性工具，將 AI 權重轉化為臨床醫師可理解的物理指標。
+
+## ✨ 核心技術與創新 (Key Features)
+* **突破性架構：** 實作 Pseudo-separable 四向平行掃描，精確捕捉皮膚病灶的邊緣不規則性與全域對稱性。
+* **絕對數值穩定性：** 強制約束系統極點半徑 $\rho<1$，從數學層面保證模型在有限精度 (FWL) 下的 BIBO 絕對穩定性。
+* **解決 AI 黑盒問題：** 開發頻譜響應與極點分佈可視化工具，將高頻極點直接映射至臨床 ABCD 法則中的邊緣碎裂紋理。
+* **嚴謹的大數據工程：** 處理高達 25,331 張臨床影像，實作 Patient-wise（病患層級）五折交叉驗證防堵資料洩漏 (Data Leakage)。
+
+## 🚧 目前進度 (Current Status)
+* [x] **第一階段：** 完成 2D Rot-IIR 算子之穩定性重參數化設計與四向掃描架構。
+* [x] **第二階段：** 建立基礎訓練流水線，完成 ISIC 2019 數據集之層級化數據工程。
+* [ ] **第三階段 (進行中)：** 開發極點分佈診斷工具，執行有限精度 (FP16/BF16) 一致性驗證，評估模型在邊緣運算環境下之誤差擴散狀況。
+
+## 🛠️ 技術棧 (Tech Stack)
+* **程式語言：** Python
+* **深度學習框架：** PyTorch
+* **核心領域：** State Space Models (SSM), IIR Filter Design, Parallel Scanning
+
+## 📄 計畫相關文件 (Documents)
+* **[閱讀完整國科會計畫企劃書 (PDF)](#)** <!-- 上傳 PDF 後，將此處的 # 替換為你的 PDF 檔案連結 -->
